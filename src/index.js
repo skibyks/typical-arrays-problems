@@ -18,10 +18,14 @@ exports.max = function max(maxarr){
 };
 
 exports.avg = function avg(avgarr){
+  let avg = 0;
   if(avgarr === undefined || avgarr.length === 0){
       return 0
   } else {
-     return avgarr.length/2 
+    for( let i = 0; i < avgarr.length; i++){
+      avg += avgarr[i]
+    }
+  return avg/avgarr.length;
   }
   
 };
